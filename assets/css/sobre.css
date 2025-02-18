@@ -1,0 +1,369 @@
+/* FONTES */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap');
+
+
+/* RAIZ */
+
+:root {
+
+    --font-padrao: 'Poppins', sans-serif;
+    --font-titulo: 'Times New Roman', Times, serif;
+
+}
+
+/* RESETE */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: serif;
+    list-style: none;
+
+}
+
+
+body {
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: end;
+  padding: 3.5rem 5rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-list li {
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 3px;
+  font-family: var(--font-padrao);
+}
+
+.nav-list li:hover {
+  background: #f81f01;
+  background: -webkit-linear-gradient(to right, #f81f01, #493240);
+  background: linear-gradient(to right, #f81f01, #493240);
+}
+
+.nav-link {
+  font-size: 1.15rem;
+  color: white;
+  font-weight: 400;
+  
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.active-menu {
+    background: #f81f01;
+    background: -webkit-linear-gradient(to right, #f81f01, #493240);
+    background: linear-gradient(to right, #f81f01, #493240);
+    padding: 10px;
+    border-radius: 3px;
+ }
+
+ .idioma {
+  position: fixed;
+  top: 6.8%;
+  left: 3%;
+  border-radius: 5px;
+ }
+
+ .idioma-button--area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+ }
+
+ .idioma button {
+  padding: 3px 10px;
+  border-radius: 5px;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.164);
+ }
+
+ .idioma button p {
+  color: #b1acb9;
+  font-family: serif;
+ }
+
+ .idioma button i {
+  color: #b1acb9;
+ }
+
+@-webkit-keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+@keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+
+.view_port {
+    background-color: transparent;
+    height: 4px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .cylon_eye {
+    background-color: red;
+    background-image: linear-gradient(to right,
+        rgba(0, 0, 0, .9) 25%,
+        rgba(0, 0, 0, .1) 50%,
+        rgba(0, 0, 0, .9) 75%);
+    color: white;
+    height: 100%;
+    width: 20%;
+  
+    -webkit-animation: 4s linear 0s infinite alternate move_eye;
+    animation: 4s linear 0s infinite alternate move_eye;
+  }
+
+  /* MAIN */
+
+  main {
+    width: 100vw;
+    height: 100%;
+  }
+
+  .sobre {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sobre-img {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .sobre-links {
+    display: flex;
+    gap: 5px;
+  }
+
+  .sobre-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .sobre-link i {
+    font-size: 25px;
+    background-image: linear-gradient(145deg, #f81f01, #493240);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.profile {
+
+    height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.profile__photoblock {
+position: relative;
+width: 250px;
+}
+
+.profile__photoblock:hover .profile__outline{
+transform: rotate(360deg);
+
+}
+.profile__photoblock:hover .profile__outline2{
+transform: rotate(-360deg);
+
+}
+
+.profile__outline{
+    width: 263px;
+    height: 268px;
+    display: flex;
+    border-width: 1px;
+    border-style: solid;
+    border-color: blue red gray transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: -9px;
+    left: -6px;
+    transition: all .8s ease-in-out;    
+}
+
+.profile__outline2 {
+    border-color: red transparent gray orange;
+    width: 295px;
+    height: 295px;
+    top: -23px;
+    left: -20px;
+}
+
+  .profile__img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: auto;
+  }
+
+
+  .sobre-desc {
+    width: 50%;
+    padding-right: 80px;
+  }
+
+  .sobre-desc h1 {
+    color: white;
+    font-size: 55px;
+    margin-bottom: 45px;
+  }
+
+  .sobre-desc h2 {
+    color: white;
+    margin-bottom: 45px;
+    font-family: var(--font-padrao);
+  }
+
+  .sobre-desc p {
+    color: white;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: justify;
+    font-family: var(--font-padrao);
+  }
+
+
+  /* RESPONSIVIDADE */
+
+
+  @media (min-width:768px) and (max-width:1250px) {
+
+      .sobre {
+        flex-direction: column;
+        padding-top: 20px;
+      }
+
+      .sobre-img {
+        margin-bottom: 50px;
+      }
+
+      .profile {
+        margin: 0;
+      }
+
+      .sobre-desc {
+        padding: 0 30px;
+        width: 100%;
+      }
+
+  }
+
+
+  @media (min-width:320px) and (max-width:767px) {
+
+    header {
+      margin-bottom: 30px;
+    }
+
+    .idioma {
+      top: 3.5%;
+    }
+
+    .idioma button p {
+      display: none;
+     }
+
+    .idioma button img {
+      width: 30px;
+    }
+
+    .nav-bar {
+      padding: 1.5rem 1.5rem;
+    }
+
+    .nav-item {
+      display: none;
+    }
+
+    .mobile-menu-icon {
+      display: block;
+    }
+
+    .mobile-menu-icon button {
+      background-color: transparent;
+      border: 0;
+    }
+
+    .mobile-menu a {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item {
+      display: block;
+      padding-top: 1.2rem;
+    }
+
+    .open {
+      display: block;
+    }
+
+    .sobre {
+      flex-direction: column-reverse;
+      width: 100%;
+      padding: 0 5px;
+    }
+
+    .sobre-img {
+      margin-bottom: 50px;
+    }
+
+    .profile {
+      margin: 0;
+      width: 300px;
+    }
+
+    .sobre-desc {
+      padding: 0 10px 30px 10px;
+      width: 100%;
+    }
+
+  }

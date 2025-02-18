@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    width: 100vw; /* Ocupar todo espaço pra que ela fique toda dentro do iframe */
+    -webkit-filter: grayscale(100%); /* Deixa a img em preto e branco */
+}
+
+img:hover { /* Tira a img do preto e branco */
+    -webkit-filter: grayscale(0%);
+    transition: ease-out 1s;
+}
+
+::-webkit-scrollbar { /* Para esconder a barra de rolagem, mas ela ainda existe a rolagem só nao pode ser vista */
+    width: 0;
+    height: 0;
+
+}
+
+
+
+
+
+
+
+

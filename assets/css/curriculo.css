@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap');
+
+:root {
+    --font-padrao: 'Poppins', sans-serif;
+    --font-titulo: 'Times New Roman', Times, serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+body {
+    overflow-x: hidden;
+    text-align: justify;
+}
+
+body a {
+    color: black;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.cabecalho, footer {
+    width: 100vw;
+    height: 70px;
+    margin-top: 50px;
+    background: #f81f01;
+    background: -webkit-linear-gradient(to right, #493240, #f81f01);
+    background: linear-gradient(to right, #493240, #f81f01);
+}
+
+.cabecalhoArea {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desc {
+    font-size: 35px;
+    color: white;
+}
+
+.imgArea {
+    background: #f81f01;
+    background: -webkit-linear-gradient(to right, #493240, #f81f01);
+    background: linear-gradient(to right, #493240, #f81f01);
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.imgArea .img img {
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+}
+
+.infoArea {
+    margin: 40px 0;
+}
+
+.infoArea i {
+    margin-right: 8px;
+}
+
+.download {
+    display: flex;
+    justify-content: space-between;
+}
+
+.downloadIcon {
+    margin-right: 10px;
+}
+
+.downloadIcon a {
+    color: black;
+}
+
+.info1, .info2, .info3, .info4 {
+    padding: 5px 0;
+}
+
+.conteudo h2, .conteudo2 h2 {
+    background-image: linear-gradient(145deg, #f81f01, #572da5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-family: var(--font-padrao);
+    line-height: 20px;
+}
+
+.conteudo p {
+    line-height: 20px;
+}
+
+.conteudo a {
+    display: flex;
+    gap: 10px;
+}
+
+.sobre .bar {
+    margin-bottom: 10px;
+}
+
+.cursosFinalizados-area, .cursosAndamento-area, .conteudo2 {
+    margin-top: 60px;
+}
+
+.cursosFinalizados-area a, .cursosAndamento-area a {
+    margin-top: 25px;
+}
+
+.bar { 
+    background: #f81f01;
+    background: -webkit-linear-gradient(to right, #493240, #f81f01);
+    background: linear-gradient(to right, #493240, #f81f01);
+    width: 40px;
+    height: 3px;
+}
+
+.conteudo2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteudo2 .bar {
+    margin-bottom: 20px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a, footer i {
+    color: white;
+}
+
+footer img {
+    margin-left: 5px;
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (min-width:320px) and (max-width:767px) {
+    .container {
+        padding: 0 5px;
+    }
+
+    .desc {
+        font-size: 22px;
+    }
+    
+    .imgArea {
+        width: 100px;
+        height: 100px;
+    }
+
+    .infoArea {
+        margin-top: 20px;
+    }
+
+    .downloadIcon span {
+        display: none;
+    }
+
+    .downloadIcon i {
+        padding-right: 27px;
+    }
+    
+    .infoArea i {
+        margin-right: 2px;
+    }
+    
+    .info1, .info2, .info3, .info4 {
+        padding: 3px 0;
+    }
+
+    .cursosFinalizados-area h2, .cursosAndamento-area h2, .conteudo h2, .conteudo2 h2 {
+        font-size: 18px;
+        text-align: left;
+    }
+    
+    .cursosFinalizados-area h3, .cursosAndamento-area h3, .conteudo2 h3 {
+        font-size: 15px;
+        text-align: left;
+        padding-bottom: 10px;
+    }
+
+    .cursosFinalizados-area i, .cursosAndamento-area i {
+        display: none;
+    }
+
+    .conteudo2 {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+
+@media (min-width:768px) and (max-width:1023px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .downloadIcon {
+        margin-right: 20px;
+    }
+}
+
+
