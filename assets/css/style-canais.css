@@ -11,20 +11,18 @@ body, html {
     scroll-behavior: smooth;
     overflow-x: hidden;
     max-width: 100%;
-
-    background: #ff0000;
-    background: -webkit-radial-gradient(circle, #ff0000 0%, #000000 10%, #000000 10%, #000000 10%);
-    background: radial-gradient(circle, #ff0000 0%, #000000 80%, #000000 10%, #000000 10%);
+    color: white;
+    background: black;
 }
 
 .container {
-    max-width: 50%;
+    max-width: 80%;
     margin: auto;
 }
 
 header {
     position: absolute; /* Ou 'fixed' se quiser fixo na tela */
-    top: 5%;
+    top: 6%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -33,7 +31,7 @@ header {
 }
 
 main {
-    width: 1920px;
+    width: 100vw;
     height: 100vh;
     margin: auto;
     display: flex;
@@ -60,6 +58,7 @@ main::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 800px;
 }
 
 .logo {
@@ -67,22 +66,17 @@ main::before {
     font-size: 50px;
 }
 
-
-
-
-
-
-
 .pai {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
     z-index: 10;
+    padding-top: 100px;
 }
 
 .filho1 {
-    width: 750px;
+    width: 550px;
     height: 260px;
 
     display: flex;
@@ -90,15 +84,14 @@ main::before {
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 20px 0; /* 20px de separação total entre os elementos */
     text-align: center;
-    line-height: 380%;
+    line-height: 420%;
+    padding: 10px;
 }
 
 .filho1 h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
+    font-weight: 800;
 }
 
 .filho2 {
@@ -148,6 +141,147 @@ section {
     background-color: black;
 }
 
+#secao01 {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    background: black;
+}
+
+.secao01_button {
+    border: 0px;
+    cursor: pointer;
+    fill: currentcolor;
+    position: relative;
+    transition-duration: 250ms;
+    transition-property: background-color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.68, 0.06);
+    vertical-align: text-top;
+    width: auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+    min-height: 3.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    background: rgba(128, 128, 128, 0.4);
+    color: rgb(255, 255, 255);
+}
+
+.secao01_aviso {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(91deg, #482566 0%, #161d52 99.51%);
+    padding: 10px 26px 10px 26px;
+    border-radius: 1rem;
+    margin-left: 20px
+}
+
+#secao02, #secao03, #secao04 {
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 20%;
+    transition: 0.5s;
+    padding: 20px;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.secao03_slider {
+    display: flex;
+}
+
+.secao03_slide {
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.faq-container {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.faq-item {
+    
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.toggle-btn {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.toggle-btn:hover {
+    background: #0056b3;
+}
 
 #rodape {
     background-color: brown;
