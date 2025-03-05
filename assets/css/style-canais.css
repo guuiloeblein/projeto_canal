@@ -184,9 +184,14 @@ section {
     margin-left: 20px
 }
 
-#secao02, #secao03, #secao04 {
+#secao02, #secao03, #secao_04 {
     display: flex;
     flex-direction: column;
+    margin-bottom: 70px;
+}
+
+#secao02 {
+    margin-bottom: 70px;
 }
 
 .slider-container {
@@ -253,7 +258,8 @@ section {
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 15px;
-    border: 1px solid #ddd;
+    
+    background-color: rgb(45, 45, 45);
 }
 
 .faq-question {
@@ -273,11 +279,11 @@ section {
 }
 
 .toggle-btn {
-    background: #007BFF;
+    background-color: rgb(45, 45, 45);
     color: white;
     border: none;
     padding: 5px 10px;
-    font-size: 14px;
+    font-size: 45px;
     cursor: pointer;
     border-radius: 5px;
 }
@@ -299,7 +305,8 @@ section {
 
 .section_video {
     width: 80%;
-    margin: 20px auto;       
+    margin: auto;
+    margin-bottom: 70px;      
     border-radius: 8px;
     background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfY8Z4ZL6tnxEyuV8FhF2vNECG7ZmnGcyUBQ&s') center/cover no-repeat;
 }
@@ -373,7 +380,35 @@ section {
 }
 
 #rodape {
-    background-color: brown;
+    
+    display: flex;
+    flex-direction: column;
+    margin-top: 65px;
+}
+
+.rodape01 {
+    margin: auto;
+    text-align: center;
+}
+
+.rodape01 button {
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+.rodape02 h4 {
+    margin-bottom: 35px;
+}
+
+.menu_auxiliar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.menu_auxiliar a {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 
