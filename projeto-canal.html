@@ -118,6 +118,85 @@
     </script>                                               
     </section>
 
+    <div class="section_video">
+      <div class="back-black">
+          <div class="left-div">
+              <h2>Assista a um vídeo interessante!</h2>
+              <p>O vídeo é carregado automaticamente e, ao final, uma thumbnail neutra aparecerá.</p>
+          </div>
+   
+          <div class="right-div">
+              <div id="playerContainer">
+                  <div id="player" allow="autoplay"></div>
+                  <div id="overlay" onclick="replayVideo()">
+                      <button id="replayButton">▶ Reproduzir</button>
+                  </div>
+                  <button id="muteButton" class="mute-button">🔇</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <script>
+      const videos = [
+          "sXGZbXPjdUs?si=RvxTNMAAm0aDFIY6",
+          "DfcXJYv_dxE?si=QsyNrN45nJNVg29l",
+          "3IVPHxs4NoM?si=FIm0lrWsadLcnJjf"
+      ];
+
+      const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+
+      let player;
+
+      function onYouTubeIframeAPIReady() {
+          player = new YT.Player("player", {
+              videoId: randomVideo,
+              playerVars: {
+                  autoplay: 1,
+                  mute: 1,
+                  rel: 0,
+                  controls: 0,
+                  modestbranding: 1,
+                  showinfo: 0,
+                  playsinline: 1,
+                  fs: 0,
+                  disablekb: 1,
+              },
+              events: {
+                  "onReady": function(event) {
+                      setTimeout(() => event.target.playVideo(), 500);
+                  },
+                  "onStateChange": function(event) {
+                      if (event.data === 0) {
+                          document.getElementById("overlay").style.display = "flex";
+                          document.getElementById("replayButton").style.display = "block";
+                      }
+                  }
+              }
+          });
+      }
+
+      function replayVideo() {
+          document.getElementById("overlay").style.display = "none";
+          document.getElementById("replayButton").style.display = "none";
+          player.seekTo(0);
+          player.playVideo();
+      }
+
+      document.getElementById("muteButton").addEventListener("click", function() {
+          if (player.isMuted()) {
+              player.unMute();
+              this.textContent = "🔊";
+          } else {
+              player.mute();
+              this.textContent = "🔇";
+          }
+      });
+  </script>
+
+
     <section id="secao03" class="container">
         <div>
           <h2>Mais motivos para assinar</h2>
