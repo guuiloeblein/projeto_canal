@@ -76,7 +76,7 @@ main::before {
 }
 
 .filho1 {
-    width: 550px;
+    width: 565px;
     height: 260px;
 
     display: flex;
@@ -313,7 +313,7 @@ section {
 }
 
 .left-div {
-    width: 50%;
+    width: 40%;
     padding: 20px;
     color: white;
 }
